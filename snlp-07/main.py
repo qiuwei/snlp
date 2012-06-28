@@ -22,6 +22,7 @@ if __name__ == '__main__':
     for root, dirs,files in os.walk(path):
         if dirs==[]:
             for f_name in files:
+                print f_name
                 with open (os.path.join(root,f_name),'r')  as f_in:
                     data = f_in.read()
                     corpus = WordSenseParser.parse(data)
