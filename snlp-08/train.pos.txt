@@ -1,0 +1,30 @@
+here 's baby
+adv v n
+
+baby will n't fit
+n aux neg n
+
+is it too big
+v pro adv adj
+
+what about this baby look
+pro prep det n n
+
+want to put them on this little table
+v inf v pro prep det adj n
+
+or put them on this table
+conj v pro prep det n
+
+what about that
+pro prep pro
+
+make Mummy push her
+v n v pro
+
+push her then
+v pro adv
+
+push push push
+v n n
+
