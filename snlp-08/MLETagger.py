@@ -37,6 +37,6 @@ class MLETagger(object):
 
     def tag(self, para):
         if type(para) == list:
-            self._tag_tokens(para)
+            return self._tag_tokens(para)
         else:
-            self._tag_string(para)
+            return self._tag_string(para)
