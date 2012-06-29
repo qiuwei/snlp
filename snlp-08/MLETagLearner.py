@@ -30,8 +30,7 @@ class MLETagLearner(object):
                     wp_dict[wp] += 1
                 except KeyError:
                     wp_dict[wp] = 1
-        #for key in wp_dict.keys():
-        #    print key, wp_dict[key]
+                    
         for w in vocab.keys():
             max_occur_num = 0
             for t in tag_set:
