@@ -27,9 +27,9 @@ class MLETagLearner(object):
                 if wp[1] not in tag_set:
                     tag_set.append(wp[1])
                 try:
-                    wp_dict[tuple(wp)] += 1
+                    wp_dict[wp] += 1
                 except KeyError:
-                    wp_dict[tuple(wp)] = 1
+                    wp_dict[wp] = 1
                     
         for w in vocab.keys():
             max_occur_num = 0
