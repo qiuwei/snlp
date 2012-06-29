@@ -20,7 +20,7 @@ class Instance(object):
         
         self.result = len(cntxt_lst) * [None]
         for i in range(len(cntxt_lst)):
-            self.result[i] = (cntxt_lst[i], pos_lst[i])
+            self.result[i] = [cntxt_lst[i], pos_lst[i]]
     
     def __str__(self):
         s = ""
