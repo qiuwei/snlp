@@ -36,5 +36,17 @@ class Instance(object):
             return self.result[idx]
         else:
             return self.result 
+    
+    def get_words(self, idx = None):
+        if idx != None:
+            return [word[0] for word in self.result][idx]
+        else:
+            return [word[0] for word in self.result]
+    
+    def get_tags(self, idx = None):
+        if idx != None:
+            return [word[1] for word in self.result][idx]
+        else:
+            return [word[1] for word in self.result]
         
         

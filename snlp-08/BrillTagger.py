@@ -9,7 +9,7 @@ class BrillTagger(object):
     Brill tagger implementation
     '''
     
-    def __init__(self):
+    def __init__(self, init_tagger, rules):
         pass
 
     def tag(self, sentence):

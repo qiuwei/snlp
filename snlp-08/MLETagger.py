@@ -21,18 +21,18 @@ class MLETagger(object):
         pos_lst = []
         for w in word_lst:
             try:
-                pos_lst.append(self.model[w])
+                pos_lst.append((w,self.model[w]))
             except KeyError:
-                pos_lst.append('n')    
+                pos_lst.append((w, 'n'))    
         return pos_lst
     
     def _tag_tokens(self, tokens):
         pos_lst = []
         for w in tokens:
             try:
-                pos_lst.append(self.model[w])
+                pos_lst.append((w, self.model[w]))
             except KeyError:
-                pos_lst.append('n')    
+                pos_lst.append((w,'n'))    
         return pos_lst   
 
     def tag(self, para):
