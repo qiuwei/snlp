@@ -34,7 +34,7 @@ if __name__ == '__main__':
         fin.close()
     # model doesn't exist
     except IOError:
-        print "MLE model not found! Retraining"
+        print "MLE model not found! Retraining..."
         print "Loading training corpus..."
         train_corpus = CorpusReader.readin('train.pos')
         print "Corpus loaded"
@@ -54,7 +54,7 @@ if __name__ == '__main__':
         fin.close()
     # model doesn't exist
     except IOError:
-        print "Brill model not found! Retraining"
+        print "Brill model not found! Retraining..."
         print "Loading training corpus..."
         train_corpus = CorpusReader.readin('train.pos')
         print "Corpus loaded"
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         
         trainer =  BrillTaggerTrainer(mle_tagger, templates)
         print "Learning new model for brill tagger"
-        brill_tagger = trainer.train(train_corpus, 2, 2)
+        brill_tagger = trainer.train(train_corpus, 200, 2)
         print "New brill model learned"
         fout = open('brilltagger.model', 'wb')
         dump(brill_tagger, fout, -1)
