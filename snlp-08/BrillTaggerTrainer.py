@@ -37,6 +37,7 @@ class BrillTaggerTrainer(object):
                     break
                 else:
                     rules.append(rule)
+                    print "A new rule found!"
                     k = 0
                     for sent in test_corpus:
                         k += len(rule.apply(sent))
@@ -99,6 +100,7 @@ class BrillTaggerTrainer(object):
             for rule in self._find_rules_at(test_sent, train_sent, wordnum):
                 rule_score_dict[rule] += 1
         
+        print "%d candidated rules found in current iteration! " % len(rule_score_dict)
         return sorted(rule_score_dict.items(), key=lambda (rule, score): -score)
     
     def _find_rules_at(self, test_sent, train_sent, i):
