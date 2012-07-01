@@ -56,6 +56,3 @@ class TokenTemplate(BrillTemplate):
             value = self._rule_class.extract_property(tokens[i])
             conditions.append( (start, end, value) )
         return conditions
-        
-        
-    

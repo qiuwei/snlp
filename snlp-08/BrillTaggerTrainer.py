@@ -34,6 +34,7 @@ class BrillTaggerTrainer(object):
                 (rule, score, fixscore) = self._best_rule(test_corpus, corpus)
                 if rule is None or score < min_score:
                     print 'Insufficient improvement; stopping'
+                    break
                 else:
                     rules.append(rule)
                     k = 0

@@ -8,7 +8,6 @@ class Instance(object):
     '''
     instance in the corpus, stored as a list of tuple(word, pos)
     '''
-    result = None
     
     def __init__(self, context, pos = None):
         '''
@@ -50,3 +49,5 @@ class Instance(object):
             return [word[1] for word in self.result]
         
         
+    def __len__(self):
+        return len(self.result)
